@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <h1>可以双向数据绑定的标签 : input : select : textarea</h1>
+        <lable>姓名：</lable>
+        <!-- 声明ref属性：可以在方法中通过 this.$refs.name 知道这个input -->
+        <!-- v-on 绑定事件： keyup 键盘抬起事件 enter 回车键 （给这个input绑定回车的抬起事件） -->
+        <input type="text" ref="name" v-on:keyup.enter="loginName">
+        <span>{{name}}</span>
+        <br/>
+        <br/>
+        <input type="text" disabled v-model="showName" style="width: 300px; height: 50px;">
+    </div>
+    <script src="01数据绑定.js"></script>
+</body>
+</html>
